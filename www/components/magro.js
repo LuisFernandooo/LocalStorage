@@ -13,6 +13,8 @@ function cadastrar() {
     localStorage.setItem('jogador', JSON.stringify(jogador))
     localStorage.setItem('equipe', JSON.stringify(equipe))
 
+    alert("Jogador Cadastrado!!!")
+
 }
 
 function listar(){
@@ -21,6 +23,6 @@ function listar(){
     var equipe = JSON.parse(localStorage.getItem('equipe'))
 
     for(let i = 0; i < jogador.length; i++){
-    document.getElementById('lista').innerHTML = jogador[i] + " - " + equipe[i] + "<br>"
+    document.getElementById('lista').innerHTML += jogador[i] + " - " + equipe[i] + "<br>"
     }
 }

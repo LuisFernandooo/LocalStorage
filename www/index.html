@@ -8,6 +8,9 @@
     <script src="components/magro.js"></script>
     <link rel="stylesheet" href="components/loader.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
 	<form>
@@ -17,15 +20,17 @@
 
         <div class="divider"></div>
 
-        <label for="jogador">Jogador<input type="text" name="jogador" id="jogador"></label>
+        <label for="jogador">Jogador<div class="style-input"><input type="text" name="jogador" id="jogador"></div></label>
 
-        <label for="equipe">Equipe<input type="text" name="equipe" id="equipe"></label>
+        <label for="equipe">Equipe<div class="style-input"><input type="text" name="equipe" id="equipe"></div></label>
 
         <div class="divider"></div>
 
         <input type="button" name="btnCadastrar" id="btnCadastro"  value="CADASTRAR" onclick="cadastrar()">
 
         <input type="button" name="btnListar" id="btnLista" value="LISTAR" onclick="listar()">
+
+        <h4>Jogador - Equipe</h4>
 
         <h5 id="lista"></h5>
 
