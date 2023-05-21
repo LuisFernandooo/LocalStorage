@@ -1,25 +1,26 @@
-// This is a JavaScript file
-
-const jogador = [Luis]
-const equipe = [Vasco]
+var jogadorNome
+var equipeNome
+const jogador = []
+const equipe = []
 
 function cadastrar() {
-    // jogador = document.getElementById('jogador').value
-    // equipe = document.getElementById('equipe').value
+    jogadorNome = document.getElementById('jogador').value
+    equipeNome = document.getElementById('equipe').value
 
-    localStorage.setItem('jogadores', JSON.stringify(jogador))
-    localStorage.setItem('equipes', JSON.stringify(equipe))
+    jogador.push(jogadorNome)
+    equipe.push(equipeNome)
+
+    localStorage.setItem('jogador', JSON.stringify(jogador))
+    localStorage.setItem('equipe', JSON.stringify(equipe))
 
 }
 
 function listar(){
 
-    const jogadores = JSON.parse(localStorage.getItem('jogadores'))
-    const equipes = JSON.parse(localStorage.getItem('equipes'))
+    var jogador = JSON.parse(localStorage.getItem('jogador'))
+    var equipe = JSON.parse(localStorage.getItem('equipe'))
 
-    for(let i = 0; i < jogadores.length; i++){
-
-    document.getElementById('lista').innerHTML = jogadores[i] + " - " + equipes[i]
-
+    for(let i = 0; i < jogador.length; i++){
+    document.getElementById('lista').innerHTML = jogador[i] + " - " + equipe[i] + "<br>"
     }
 }
